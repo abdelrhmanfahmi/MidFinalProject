@@ -75,7 +75,11 @@
 		<div class="col-md-12">
 			<hr>
 		</div>
-	</div>
+		</div>
+		<div id="row1" class="row">
+			
+		</div>
+	
 	
 		<!-- <div class="row" id="row1">
 			
@@ -85,10 +89,16 @@
 <br>
 <br>
 <br>
-<div >
+
+<div style="float: right;width:200px">
+	<div style="float: left;width: 100%;">
 	<h3>Cart Totals</h3>
-	<hr>
-	<h5 id="finale"></h5>
+	<hr style="border:2px solid red;">
+	<h5 class="d-inline">total:</h5>
+	<h5 class="d-inline pl-5" id="finale">$</h5>
+	</div>
+	
+	<!-- <h5 style="float:right;" id="finale"></h5> -->
 	</div>
 <!-- <div style="margin-left: 700px;">
 	<button id="btnRefres">Reset</button>

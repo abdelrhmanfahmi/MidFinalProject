@@ -26,13 +26,15 @@ window.onload = function(){
 		var div1 = document.createElement('div');
 		var div2 = document.createElement('div');
 		var div3 = document.createElement('div');
-		var div4 = document.createElement('div');
+		var totalDivs = document.createElement('div');
+		var rowss = document.createElement('div');
 
 
-		div1.setAttribute('class' , 'col-lg-3');
-		div2.setAttribute('class' , 'col-lg-3');
-		div3.setAttribute('class' , 'col-lg-3');
-		div4.setAttribute('class' , 'row');
+		div1.setAttribute('class' , 'col-md-3');
+		div2.setAttribute('class' , 'col-md-2');
+		div3.setAttribute('class' , 'col-md-3');
+		totalDivs.setAttribute('class' , 'col-md-12');
+		rowss.setAttribute('class' , 'row');
 
 
 		var div5 = document.createElement('div');
@@ -40,10 +42,10 @@ window.onload = function(){
 		//var div7 = document.createElement('div');
 		var totDiv = document.createElement('div');
 
-		totDiv.setAttribute('class' , 'row col-lg-3');
+		totDiv.setAttribute('class' , 'row');
 		
-		div5.setAttribute('class' , 'col-md-6');
-		div6.setAttribute('class' , 'col-md-6');
+		div5.setAttribute('class' , 'col-md-2 text-right pt-4');
+		div6.setAttribute('class' , 'col-md-2 text-center pt-4');
 		//div7.setAttribute('class' , 'row mt-4');
 		// totDiv.setAttribute('class' , '');
 
@@ -66,7 +68,7 @@ window.onload = function(){
 		total.setAttribute('id' , retrievedCart[key].id);
 		btnsDelete.innerHTML = 'Delete';
 		btnsDelete.setAttribute('id', retrievedCart[key].id);
-		$(btnsDelete).css({'margin-left':'100px' , 'border-radius':'30px'});
+		//$(btnsDelete).css({'margin-left':'100px' , 'border-radius':'30px'});
 
 		$(quantit).css({'border-radius':'30px' , 'margin-top':'30px'});
 		$(div1).css('display' , 'flex');
@@ -185,17 +187,23 @@ window.onload = function(){
 		div3.appendChild(quantit);
 		div5.appendChild(total);
 		div6.appendChild(btnsDelete);
-		div4.appendChild(div5);
+		rowss.appendChild(div1);
+		rowss.appendChild(div2);
+		rowss.appendChild(div3);
+		rowss.appendChild(div5);
+		rowss.appendChild(div6);
+		/*div4.appendChild(div5);
 		div4.appendChild(div6);
 		totDiv.appendChild(div1);
 		totDiv.appendChild(div2);
 		totDiv.appendChild(div3);
-		totDiv.appendChild(div4);
+		totDiv.appendChild(div4);*/
 		/*div7.appendChild(div5);
 		div7.appendChild(div6);
 		div4.appendChild(div7);*/
 		//div4.appendChild(div7);
-		$('.row').append(totDiv);
+		totalDivs.appendChild(rowss)
+		$('#row1').append(totalDivs);
 		// totDiv.appendChild(div1);
 		// totDiv.appendChild(div2);
 		// totDiv.appendChild(div3);
