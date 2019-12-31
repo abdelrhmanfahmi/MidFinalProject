@@ -95,7 +95,7 @@
 	<h3>Cart Totals</h3>
 	<hr style="border:2px solid red;">
 	<h5 class="d-inline">total:</h5>
-	<h5 class="d-inline pl-5" id="finale">$</h5>
+	<h5 class="d-inline pl-5" id="finale">0</h5>
 	</div>
 	
 	<!-- <h5 style="float:right;" id="finale"></h5> -->

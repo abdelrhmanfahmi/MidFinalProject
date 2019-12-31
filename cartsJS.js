@@ -66,6 +66,7 @@ window.onload = function(){
 		quantit.setAttribute('max' , retrievedCart[key].Quantity);
 		$(quantit).css('width' , '200px');
 		total.setAttribute('id' , retrievedCart[key].id);
+		total.innerHTML = 0;
 		btnsDelete.innerHTML = 'Delete';
 		btnsDelete.setAttribute('id', retrievedCart[key].id);
 		//$(btnsDelete).css({'margin-left':'100px' , 'border-radius':'30px'});
@@ -94,11 +95,11 @@ window.onload = function(){
 
 			//console.log(totOfTotals);
 		    var totOfTotals = document.getElementById('finale').innerHTML;
-
-			 totOfTotals = parseInt(totOfTotals) - totalsss;
+		   
+				totOfTotals = parseInt(totOfTotals) - totalsss;
 
 			document.getElementById('finale').innerHTML = totOfTotals;
-				var hh = this.parentNode.parentNode.parentNode.parentNode;
+				var hh = this.parentNode.parentNode;
 				console.log(hh)
 				hh.remove();
 				var ssss = JSON.parse(localStorage.getItem('Cart'));
@@ -167,6 +168,7 @@ window.onload = function(){
 			var newPrices = parseInt(prices);
 			//var ids = ev.target.className;
 			var ff = document.getElementById(retrievedCart[key].id);
+
 			ff.innerHTML = res*newPrices;
 			fahmy.push(ff.innerHTML);
 
