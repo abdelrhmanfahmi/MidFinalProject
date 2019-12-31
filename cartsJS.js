@@ -161,8 +161,7 @@ window.onload = function(){
 			
 		});*/
 		$(quantit).on('change' , function(ev){
-			var disable = ev.target;
-			disable.setAttribute('disabled' , null);
+			
 			var res = ev.target.value;
 			var prices = ev.target.getAttribute('data');
 			var newPrices = parseInt(prices);
